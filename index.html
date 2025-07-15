@@ -4,69 +4,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TFG - HABLA Y CREA: ESCENARIOS VR EN EL NAVEGADOR
-        USANDO A-FRAME Y LENGUAJE NATURAL</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            color: #333;
-        }
-
-        h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }
-
-        .links {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 5px;
-            margin: 20px 0;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            margin-top: 30px;
-            font-size: 0.9em;
-            color: #7f8c8d;
-        }
-    </style>
+    <title>TFG - HABLA Y CREA</title>
+    <link rel="stylesheet" href="site-style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <h1>TFG - HABLA Y CREA: ESCENARIOS VR EN EL NAVEGADOR
-        USANDO A-FRAME Y LENGUAJE NATURAL</h1>
+<body class="d-flex flex-column min-vh-100 min-vw-100 p-0">
+    <!-- Header -->
+    <header>
 
-    <h2>Descripción</h2>
-    <p>
-        Aquí irá la descripción.
-    </p>
+        <!-- This div is intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+        <div class="overlay"></div>
 
-    <div class="links">
-        <h2>Enlaces relacionados</h2>
-        <ul>
-            <li>🔗 <a href="https://vescoth.github.io/tfg-project/" target="_blank">Web del proyecto</a></li>
-            <li>📄 <a href="TFG_Veselin.pdf" target="_blank">Memoria del TFG (PDF)</a></li>
-            <li>💻 <a href="https://github.com/vescoth/vescoth.github.io" target="_blank">Repositorio GitHub</a></li>
-        </ul>
+        <!-- The HTML5 video element that will create the background video on the header -->
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="./static/header.mp4" type="video/mp4">
+        </video>
+
+        <!-- The header content -->
+        <div class="container h-100">
+            <div class="d-flex h-100 text-center align-items-center">
+                <div class="w-100 text-white">
+                    <h1 class="display-3">Habla y crea</h1>
+                    <p class="lead mb-0">Escenarios VR en el navegador usando A-frame y Lenguaje Natural</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mb-5 overflow-auto px-3 py-4" style="max-width: 1200px;">
+        <h2 class="mb-3">Descripción</h2>
+        <p>
+            Este trabajo investiga la integración de tecnologías innovadoras para el control de entornos de <b>realidad
+                virtual</b> mediante comandos de voz en <b>lenguaje natural</b>. La propuesta combina realidad virtual
+            con modelos de
+            inteligencia artificial capaces de interpretar órdenes verbales y traducirlas en acciones sobre objetos 3D,
+            integrando también manipulación directa tipo <b>drag & drop</b>. Esta interfaz híbrida mejora la
+            accesibilidad y
+            versatilidad de la interacción inmersiva, frente a sistemas tradicionales basados en hardware físico. La
+            solución demuestra ser <b>flexible, escalable y adaptable</b> a diversos contextos, con aplicaciones
+            potenciales en
+            educación, diseño y entornos industriales.
+        </p>
+
+        <div class="my-4">
+            <h2 class="mb-3">Vídeo demostración</h2>
+            <p>
+                A continuación se muestra un vídeo donde se puede ver el funcionamiento de la aplicación web
+                desarrollada en su versión de escritorio. En este vídeo se comenta brevemente cómo funciona el sistema y se 
+                crea una escena compuesta por varios objetos 3D para demostrar las capacidades de la aplicación.
+            </p>
+        </div>
+        <div class="d-flex justify-content-center align-items-center" style="height: 400px; width: 100%;">
+            <iframe src="https://www.youtube.com/embed/W6efrd9m6oM" title="Vídeo demostración" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen class="w-100 h-100" style="max-width: 800px; max-height: 450px;">
+            </iframe>
+        </div>
+
+        <div class="my-4">
+            <h2 class="mb-3">Enlaces relacionados</h2>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="static/pdf-image.jpg" class="card-img-top" alt="Pdf image"
+                            style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Memoria del TFG</h5>
+                            <p class="card-text">Documento PDF que recoge la memoria completa del Trabajo de Fin de
+                                Grado, detallando el desarrollo del proyecto, tecnologías utilizadas y resultados
+                                obtenidos.</p>
+                            <a href="Memoria_TFG_Veselin_Todorov_Hristov.pdf" class="btn btn-primary w-100"
+                                target="_blank">Ver Memoria (PDF)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="static/app-general.png" class="card-img-top" alt="App image"
+                            style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Web del Proyecto</h5>
+                            <p class="card-text">Aplicación Web del proyecto disponible para su uso en navegadores de
+                                cualquier dispositivo. Aquí podrás explorar las funcionalidades y características del
+                                sistema creando tus propias escenas con la ayuda de Gema, la asistente virtual.</p>
+                            <a href="https://vescoth.github.io/tfg-project/" class="btn btn-primary"
+                                target="_blank">Acceder a la
+                                Web del Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100">
+                        <img src="static/github.jpg" class="card-img-top" alt="App image"
+                            style="height: 250px; object-fit: cover;">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <h5 class="card-title">Repositorio del Proyecto</h5>
+                            <p class="card-text">Código fuente y documentación del proyecto disponibles en GitHub. Aquí
+                                podrás
+                                explorar la estructura del proyecto, así como contribuir y realizar modificaciones si lo
+                                deseas.</p>
+                            <a href="https://github.com/vescoth/vescoth.github.io" class="btn btn-primary"
+                                target="_blank">Acceder al
+                                Repositorio del Proyecto</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="footer">
-        <p>Trabajo realizado por <strong>Veselin Todorov Hristov</strong> - Universidad Rey Juan Carlos (2024-2025)</p>
-    </div>
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-3 mt-auto">
+        <div class="container text-center">
+            <small>
+                Trabajo realizado por <strong>Veselin Todorov Hristov</strong> - Universidad Rey Juan Carlos (2024-2025)
+            </small>
+            <a href="https://www.linkedin.com/in/veselinth" target="_blank" class="text-light ms-2" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-linkedin" viewBox="0 0 16 16">
+                    <path
+                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                </svg>
+            </a>
+            <br>
+
+        </div>
+    </footer>
 </body>
 
 </html>
